@@ -1,6 +1,7 @@
 Poky
 ====
 
+
 Poky is an integration of various components to form a complete prepackaged
 build system and development environment. It features support for building
 customised embedded device style images. There are reference demo images

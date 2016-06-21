@@ -1,0 +1,23 @@
+language: sh
+
+sudo: required
+dist: xenial
+
+git:
+  depth: 3
+
+#branches:
+#  only:
+#  - toaster-next
+
+install:
+  - mkdir $HOME/bin/
+  - sudo apt-get install python diffstat gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat
+
+before_script:
+  - export PATH=$PATH:$HOME/bin/
+
+script:
+  - . oe-init-build-env
+  - bitbake core-image-minimal
+
